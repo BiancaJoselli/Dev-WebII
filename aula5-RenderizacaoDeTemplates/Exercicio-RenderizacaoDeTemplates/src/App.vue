@@ -1,5 +1,7 @@
 <script setup>
-const nome =`bianca`;
+import{ ref } from 'vue';
+
+const nome =`Bianca`;
 const idade = 16;
 const contador = ref(0);
 
@@ -77,22 +79,23 @@ button {
     padding: 8px;
     border: 0;
     border-radius: 9px;
-    background-color: #3f7254;
+    background-color: #80b0ff;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
   }
 
   button:hover {
-    background-color: rgb(28, 59, 46);
+    background-color: rgb(140, 188, 216);
   }
 
   div {
     margin: 8px 0;
     padding: 9px;
-    border-radius: 4px;
+    border-radius: 8px;
     color: white;
     font-weight: bold;
+    background: #c9e0e4;
   }
 
 </style>
