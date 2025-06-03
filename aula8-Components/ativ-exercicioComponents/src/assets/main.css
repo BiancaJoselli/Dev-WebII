@@ -1,0 +1,72 @@
+@import './base.css';
+
+html {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 5vh 8vw;
+
+  & .book {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: calc(100% / 4 - 42px);
+    margin: 20px;
+
+    & h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    & .book-author {
+      font-size: 1rem;
+    }
+
+    & .book-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    & .price-and-like {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      & .mdi-heart-outline {
+        font-size: 1.3rem;
+        color: #27ae60;
+      }
+    }
+  }
+}
+
+
+button {
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+
+  &.outlined {
+    background-color: transparent;
+    color: #27ae60;
+    border: 2px solid #27ae60;
+  }
+
+  &.plain {
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+  }
+}

@@ -4,6 +4,9 @@ import FooterComponent from '@/components/FooterComponent.vue'
 import HeaderComponet from '@/components/HeaderComponent.vue'
 import HeroComponent from '@/components/HeroComponent.vue'
 import CartComponent from '@/components/CartComponent.vue'
+import FeatureComponent from './components/FeatureComponent.vue'  
+import BooksListing from './components/BooksListing.vue'
+
 const showCart = ref(false)
 const cart = ref({
   items: [],
@@ -97,118 +100,28 @@ function addToCart(book) {
 </script>
 
 <template>
-  <HeaderComponet @click-cart="showCart = !showCart" />
+  <HeaderComponet @click-cart="showCart = !showCart"></HeaderComponet>
   <main v-if="showCart">
     <CartComponent 
     :cart="cart"  
     @hide-cart="showCart = false" 
     @incremente-book = "incrementBookToCart"
     @decremente-book = "decrementBookToCart"
-    
     />
   </main>
   <main v-else>
     <HeroComponent></HeroComponent>
-    <section class="featured">
-      <div>
-        <span class="mdi mdi-truck"></span>
-        <h2>Frete grátis para SC</h2>
-      </div>
-      <div>
-        <span class="mdi mdi-star"></span>
-        <h2>Livros recomendados</h2>
-      </div>
-      <div>
-        <span class="mdi mdi-book-open-page-variant"></span>
-        <h2>Mais vendidos</h2>
-      </div>
-    </section>
-    <section class="books">
-      <article class="book" v-for="book in books" :key="book.id">
-        <img :src="book.cover" :alt="book.title" />
-        <h2>{{ book.title }}</h2>
-        <p class="book-author">{{ book.author }}</p>
-        <span class="price-and-like">
-          <p class="book-price">R$ {{ book.price.toFixed(2) }}</p>
-          <span class="mdi mdi-heart-outline"></span>
-        </span>
-        <button @click="addToCart(book)"><span class="mdi mdi-cart"></span>Comprar</button>
-      </article>
-    </section>
+
+    <FeatureComponent></FeatureComponent>
+
+    <BooksListing :books="books" @add-to-cart="addToCart"></BooksListing>
+  
   </main>
 
-<FooterComponent></FooterComponent>
+  <FooterComponent></FooterComponent>
 </template>
 
 <style scoped>
-
-.featured {
-  display: flex;
-  padding: 3vh 8vw;
-  border-bottom: 2px solid #27ae6099;
-
-  & div {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    justify-content: center;
-    gap: 10px;
-
-    & span {
-      font-size: 2rem;
-    }
-
-    & h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-  }
-
-  & article:nth-child(2) {
-    border-left: 1px solid #27ae6099;
-    border-right: 1px solid #27ae6099;
-  }
-}
-
-.books {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 5vh 8vw;
-
-  & .book {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    width: calc(100% / 4 - 42px);
-    margin: 20px;
-
-    & h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    & .book-author {
-      font-size: 1rem;
-    }
-
-    & .book-price {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-
-    & .price-and-like {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-
-      & .mdi-heart-outline {
-        font-size: 1.3rem;
-        color: #27ae60;
-      }
-    }
-  }
-}
-
 
 
 </style>
