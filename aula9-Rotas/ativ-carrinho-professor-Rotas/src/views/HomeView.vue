@@ -13,18 +13,22 @@ const cartStore = useCartStore()
 </script>
 
 <template>
-    <main v-if="cartStore.showCart">
-        <CartComponent :cart="cartStore.cart" @hide-cart="cartStore.showCart = false"
-            @increment-book="cartStore.incrementBookToCart" @decrement-book="cartStore.decrementBookToCart" />
-    </main>
+  <main v-if="cartStore.showCart">
+    <CartComponent
+      :cart="cartStore.cart"
+      @hide-cart="cartStore.showCart = false"
+      @increment-book="cartStore.incrementBookToCart"
+      @decrement-book="cartStore.decrementBookToCart"
+    />
+  </main>
 
-    <main v-else>
-        <HeroComponent></HeroComponent>
+  <main v-else>
+    <HeroComponent></HeroComponent>
 
-        <FeatureComponent></FeatureComponent>
+    <FeatureComponent></FeatureComponent>
 
-        <BooksListing :books="booksStore.books" @add-to-cart="cartStore.addToCart"></BooksListing>
-    </main>
+    <BooksListing :books="booksStore.listBooks" @add-to-cart="cartStore.addToCart"></BooksListing>
+  </main>
 
-    <FooterComponent></FooterComponent>
+  <FooterComponent></FooterComponent>
 </template>
