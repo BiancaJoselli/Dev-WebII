@@ -1,6 +1,6 @@
 <script setup>
 defineProps(['cart'])
-defineEmits(['hide-cart', 'increment-book', 'decrement-book'])
+defineEmits(['decrement-book', 'increment-book', 'hide-car'])
 </script>
 
 <template>

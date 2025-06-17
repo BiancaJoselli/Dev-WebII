@@ -123,5 +123,4 @@ function addToCart(book) {
 
 <style scoped>
 
-
 </style>
