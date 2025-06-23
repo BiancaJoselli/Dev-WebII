@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-export const useBooksStore = defineStore ('books', () => {
+export const useBooksStore = defineStore('books', () => {
     const books = ref ([
     {
         id: 1,
@@ -60,5 +60,6 @@ export const useBooksStore = defineStore ('books', () => {
         author: 'Cecília Meireles',
     },
 ])
-    return(books)
+    return {books}
 })
+

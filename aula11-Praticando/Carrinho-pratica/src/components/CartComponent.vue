@@ -1,6 +1,6 @@
 <script setup>
 defineProps(['cart'])
-defineEmits(['decrement-book', 'increment-book', 'hide-car'])
+defineEmits(['hide-cart', 'increment-book', 'decrement-book'])
 </script>
 
 <template>
@@ -35,7 +35,7 @@ defineEmits(['decrement-book', 'increment-book', 'hide-car'])
                             </button>
                         </div>
                     </td>
-                    <td class="cart-item-subtotal">R$ {{ book.price * book.quantity }}</td>
+                    <td class="cart-item-subtotal">R$ {{ (book.price * book.quantity).toFixed(2) }}</td>
                 </tr>
             </tbody>
         </table>

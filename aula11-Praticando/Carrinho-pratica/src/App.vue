@@ -1,15 +1,22 @@
 <script setup>
-import FooterComponet from './components/FooterComponet.vue'
-import HeaderComponent from './components/HeaderComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+import HeaderComponet from '@/components/HeaderComponent.vue'
 
 
+import { useCartStore } from '@/store/cart.js'
+const cartStore = useCartStore()
 </script>
 
 <template>
-  <HeaderComponent @click-cart="showCart = !showCart"/>
-  <main>
+  <HeaderComponet @click-cart="cartStore.showCart = !cartStore.showCart"></HeaderComponet>
+<main>
   <RouterView />
-  </main>
-  <FooterComponet/>
+</main>
 
+  <FooterComponent></FooterComponent>
 </template>
+
+<style scoped>
+
+
+</style>

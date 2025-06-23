@@ -1,5 +1,5 @@
 <script setup>
-defineEmits(['click-cart'])
+defineEmits(["click-cart"])
 </script>
 
 <template>
