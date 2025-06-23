@@ -2,8 +2,6 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCartStore = defineStore('cart', () => {
-  const showCart = ref(false)
-
   const cart = ref({
     items: [],
     total: 0,
@@ -36,5 +34,5 @@ export const useCartStore = defineStore('cart', () => {
     alert(`Adicionado ${book.title} ao carrinho!`)
   }
 
-  return { showCart, cart, incrementBookToCart, decrementBookToCart, addToCart }
+  return { cart,  incrementBookToCart, decrementBookToCart, addToCart }
 })

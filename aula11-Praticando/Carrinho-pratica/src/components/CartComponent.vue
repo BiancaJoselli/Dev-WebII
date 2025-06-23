@@ -48,8 +48,9 @@ defineEmits(['hide-cart', 'increment-book', 'decrement-book'])
             <div class="summary">
                 <h2>Total da Compra</h2>
                 <div class="summary-items">
-                    <span>Produtos</span> <span>R$ {{ cart.total.toFixed(2) }}</span> <span>Frete</span>
-                    <span> Grátis</span> <span>Total</span> <span>R$ {{ cart.total.toFixed(2) }}</span>
+                    <span>Produtos</span> <span>R$ {{ cart.total.toFixed(2) }}</span> 
+                    <span>Frete</span> <span> Grátis</span> 
+                    <span>Total</span> <span>R$ {{ cart.total.toFixed(2) }}</span>
                 </div>
                 <button>Ir para pagamento</button>
             </div>
