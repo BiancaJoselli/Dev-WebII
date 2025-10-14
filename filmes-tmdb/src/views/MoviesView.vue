@@ -71,4 +71,45 @@
     background-color: #4e9e5f;
     box-shadow: 0 0 0.5rem #387250;
 }
+
+.genre-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.movie-card {
+    width: 15rem;
+    height: 30rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 0.5rem #000;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 20rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #000;
+}
+
+.movie-details {
+    padding: 0 0.5rem;
+}
+
+.movie-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.3rem;
+    height: 3.2rem;
+}
 </style>
