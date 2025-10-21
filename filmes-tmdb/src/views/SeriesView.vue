@@ -95,7 +95,7 @@
     margin-bottom: 2rem;
 }
 .genre-item {
-    background-color: #5d6424;
+    background-color: #df2da3;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     align-self: center;
@@ -106,8 +106,8 @@
 
 .genre-item:hover {
     cursor: pointer;
-    background-color: #7d8a2e;
-    box-shadow: 0 0 0.5rem #5d6424;
+    background-color: #ff8edd;
+    box-shadow: 0 0 0.5rem #fa74d8;
 }
 
 .genre-list {
@@ -161,7 +161,7 @@
 }
 
 .serie-genres span {
-    background-color: #748708;
+    background-color: #df5ebf;
     border-radius: 0.5rem;
     padding: 0.2rem 0.5rem;
     color: #fff;
@@ -171,18 +171,18 @@
 
 .serie-genres span:hover {
     cursor: pointer;
-    background-color: #455a08;
-    box-shadow: 0 0 0.5rem #748708;
+    background-color: #ff3bbb;
+    box-shadow: 0 0 0.5rem #a54c8a;
 }
 
 .active {
-    background-color: #67b086;
+    background-color: hsl(288, 85%, 41%);
     font-weight: bolder;
 }
 
 .serie-genres span.active {
-    background-color: #abc322;
-    color: #000;
+    background-color: #c00080;
+    color: #ffffff;
     font-weight: bolder;
 }
 </style>

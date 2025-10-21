@@ -94,7 +94,7 @@ onMounted(async () => {
 }
 
 .genre-item {
-    background-color: #387250;
+    background-color: #1c1855 ;
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     color: #fff;
@@ -102,8 +102,8 @@ onMounted(async () => {
 
 .genre-item:hover {
     cursor: pointer;
-    background-color: #4e9e5f;
-    box-shadow: 0 0 0.5rem #387250;
+    background-color: #4d3bee;
+    box-shadow: 0 0 0.5rem #555ca1;
 }
 
 .genre-list {
@@ -157,7 +157,7 @@ onMounted(async () => {
 }
 
 .movie-genres span {
-    background-color: #748708;
+    background-color: #4b40aa;
     border-radius: 0.5rem;
     padding: 0.2rem 0.5rem;
     color: #fff;
@@ -167,18 +167,18 @@ onMounted(async () => {
 
 .movie-genres span:hover {
     cursor: pointer;
-    background-color: #455a08;
-    box-shadow: 0 0 0.5rem #748708;
+    background-color: #4d3bee;
+    box-shadow: 0 0 0.5rem #555ca1;
 }
 
 .active {
-    background-color: #67b086;
+    background-color: #7170ce;
     font-weight: bolder;
 }
 
 .movie-genres span.active {
-    background-color: #abc322;
-    color: #000;
+    background-color: #7170ce;
+    color: #ffffff;
     font-weight: bolder;
 }
 </style>
